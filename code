@@ -1,0 +1,29 @@
+import matplotlib.pyplot as plt
+import numpy as np
+  
+# create data
+x1 = [4.5,5.8,7.18,9.23,11.2,13.21,15.12]
+y1 = [0.27*1000/3.14/9,0.54*1000/3.14/9,0.80*1000/3.14/9,1.08*1000/3.14/9,1.33*1000/3.14/9,1.56*1000/3.14/9,1.74*1000/3.14/9]
+
+x2 = [4.69,6.23,8,9.56,11.22,12.15,14.32]
+y2 =[0.27*1000/3.14/9,0.54*1000/3.14/9,0.80*1000/3.14/9,1.07*1000/3.14/9,1.33*1000/3.14/9,1.6*1000/3.14/9,1.86*1000/3.14/9]
+
+x3 = [2.9,5.1,6.23,7.15,8.03,8.79,9.83]
+y3 =[0.27*1000/3.14/9,0.54*1000/3.14/9,0.80*1000/3.14/9,1.07*1000/3.14/9,1.331*1000/3.14/9,1.59*1000/3.14/9,1.86*1000/3.14/9]
+
+# plot lines
+plt.plot(x1, y1, label = "Pt:0.6mg/cm2;Ru:0.4mg/cm2", linestyle="-")
+plt.plot(x2, y2, label = "Pt:0.7mg/cm2;Ru:0.4mg/cm2", linestyle="--")
+plt.plot(x3, y3, label = "Pt:0.8mg/cm2;Ru:0.4mg/cm2", linestyle="-.")
+# plot lines
+plt.scatter(x1,y1,marker = '.', c = 'b')
+plt.scatter(x2,y2,marker = '.', c = 'b')
+plt.scatter(x3,y3,marker = '.', c = 'b')
+
+# plot lines
+plt.xlabel('Voltage/V')
+plt.ylabel('Current Density/mA·cm2')
+plt.grid(color = 'grey', linestyle = '--', linewidth = 0.5)
+
+plt.legend()
+plt.show()
